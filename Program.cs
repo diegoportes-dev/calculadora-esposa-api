@@ -57,7 +57,7 @@ app.UseRateLimiter();
 
 app.MapGet("/health", () => Results.Ok(new { status = "ok" }));
 
-app.MapPost("/api/produtos/identificar", async (
+app.MapPost("/produtos/identificar", async (
     IdentificarProdutoRequest? request,
     GeminiVisionClient gemini,
     ILogger<Program> logger,
